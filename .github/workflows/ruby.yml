@@ -35,7 +35,7 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
-      run: COVERAGE=1 rspec ./spec/**/*.rb
+      run: COVERAGE=1 bundle exec rspec ./spec/**/*.rb
     - uses: actions/checkout@master
     - uses: codecov/codecov-action@v2
       with:
