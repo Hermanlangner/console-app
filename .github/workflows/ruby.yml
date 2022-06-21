@@ -36,11 +36,9 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
       run: COVERAGE=1 bundle exec rspec ./spec/**/*.rb
-    - uses: actions/checkout@master
     - uses: codecov/codecov-action@v2
-      run: COVERAGE=1 bundle exec rspec ./spe
       with:
-        files: ./coverage/index.xml
+        file: ./coverage/.resultset.json
         flags: unittests # optional
         name: codecov-umbrella # optional
         fail_ci_if_error: true # optional (default = false)
