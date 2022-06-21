@@ -39,7 +39,7 @@ jobs:
     - uses: actions/checkout@master
     - uses: codecov/codecov-action@v2
       with:
-       # files: ./coverage1.xml,./coverage2.xml # optional
+        files: ./coverage/index.xml
         flags: unittests # optional
         name: codecov-umbrella # optional
         fail_ci_if_error: true # optional (default = false)
