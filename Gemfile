@@ -6,4 +6,6 @@ group :test do
   gem "rb-readline"
   gem "pry-byebug"
   gem "pry"
+  gem "simplecov"
+  gem "codecov"
 end
