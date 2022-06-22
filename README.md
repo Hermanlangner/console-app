@@ -26,3 +26,4 @@ where the path is the input file
 
 ## CI
 The CI at the moment uses github actions to run on pull requests or pushes to main, it then uploads the coverage data to codecov
+for [example here](https://github.com/Hermanlangner/console-app/pull/2) 
