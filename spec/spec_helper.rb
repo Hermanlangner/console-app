@@ -4,10 +4,13 @@ require "factory_bot"
 require_relative "../app/league"
 
 require "simplecov"
-SimpleCov.start if ENV["COVERAGE"]
+if ENV["COVERAGE"]
+  SimpleCov.start do
+  end
 
-require "codecov"
-SimpleCov.formatter = SimpleCov::Formatter::Codecov if ENV["COVERAGE"]
+  require "codecov"
+  SimpleCov.formatter = SimpleCov::Formatter::Codecov
+end
 
 module Rails
   def self.env
