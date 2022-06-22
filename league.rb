@@ -16,5 +16,5 @@ end.parse!
 if options[:file_path]
   games = File.open(options[:file_path]).map(&:chomp)
   output = League.run_league(games)
-  output.to_s
+  puts output
 end
