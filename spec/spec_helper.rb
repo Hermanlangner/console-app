@@ -1,16 +1,17 @@
 require "bundler/setup"
 require "pry"
 require "factory_bot"
-require_relative "../app/league"
 
 require "simplecov"
 if ENV["COVERAGE"]
   SimpleCov.start do
+    add_filter "spec/"
   end
 
   require "codecov"
   SimpleCov.formatter = SimpleCov::Formatter::Codecov
 end
+require_relative "../app/league"
 
 module Rails
   def self.env
