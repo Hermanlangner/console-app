@@ -12,8 +12,9 @@ OptionParser.new do |parser|
     exit
   end
 end.parse!
-#File.open('./local_test/input.txt').map(&:chomp)
+
 if options[:file_path]
   games = File.open(options[:file_path]).map(&:chomp)
-  League.run_league(games)
+  output = League.run_league(games)
+  output.to_s
 end

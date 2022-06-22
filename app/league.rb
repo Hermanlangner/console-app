@@ -16,6 +16,5 @@ module League
     end
 
     rankings = Services::Ranker.rank_leaderboard(leaderboard.board)
-    puts rankings
   end
 end
